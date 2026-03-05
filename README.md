@@ -115,3 +115,21 @@ wifi-network-troubleshooting-expert-system/
 └── requirements.txt
         Python dependencies required to run the interface (e.g., pyswip).
 ```
+# How to Run the System
+
+1. Install **SWI-Prolog**
+2. Clone this repository
+3. Open the Prolog file
+
+```prolog
+?- [wifi_expert].
+
+Run the expert system
+
+?- go.
+
+Answer the diagnostic questions with:
+
+yes.
+or
+no.
