@@ -84,6 +84,7 @@ This project applies expert system techniques to automate structured troubleshoo
 
 # Technologies Used
 - **Logic Engine:** SWI-Prolog
+- **User Interface:** Python with the `pyswip` library  
 - **Rule-Based Knowledge Representation**
 - **Backward Chaining Inference**
 
@@ -94,28 +95,25 @@ This project applies expert system techniques to automate structured troubleshoo
 ```
 DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/
 │
-├── wifi_expert/
-│   ├── wifi_expert.pl
-│   │       Entry point. Loads all modules and exposes start/0 and run_tests/0.
-│   │
-│   ├── knowledge_base.pl
-│   │       Static knowledge: diagnostic questions, confidence scores,
-│   │       explanations, and step-by-step advice for each diagnosis.
-│   │
-│   ├── rules.pl
-│   │       Six IF-THEN diagnosis rules evaluated by the inference engine
-│   │       using Prolog's backward chaining mechanism.
-│   │
-│   ├── engine.pl
-│   │       Inference engine: finds the first matching diagnosis, handles
-│   │       the Q&A loop with answer caching, and prints the diagnosis report.
-│   │
-│   └── tests.pl
-│           Automated test suite with 7 pre-loaded test cases covering
-│           all six diagnoses, including both patterns of router/ISP failure.
-│
-└── README.md
-        Project overview, group members, setup instructions, and system description.
+├── knowledge_base/
+│   └── wifi_expert.pl
+│       Prolog knowledge base containing logical facts and rules used by the expert system.
+
+├── interface/
+│   └── interface.py
+│       Python interface that communicates with the Prolog engine using the pyswip library.
+│       Handles user interaction and executes queries against the knowledge base.
+
+├── docs/
+│   └── knowledge_engineering_report.md
+│       Documentation describing the knowledge acquisition process and sources used
+│       to construct the expert system rules.
+
+├── README.md
+│       Project overview, group members, setup instructions, and system description.
+
+└── requirements.txt
+        Python dependencies required to run the interface (e.g., pyswip).
 ```
 
 ---
