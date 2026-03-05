@@ -83,8 +83,7 @@ This project applies expert system techniques to automate structured troubleshoo
 ---
 
 # Technologies Used
-- **Logic Engine:** SWI-Prolog  
-- **User Interface:** Python with the `pyswip` library  
+- **Logic Engine:** SWI-Prolog
 - **Rule-Based Knowledge Representation**
 - **Backward Chaining Inference**
 
@@ -93,43 +92,80 @@ This project applies expert system techniques to automate structured troubleshoo
 ## Project Structure
 
 ```
-wifi-network-troubleshooting-expert-system/
+DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/
 │
-├── knowledge_base/
-│   └── wifi_expert.pl
-│       Prolog knowledge base containing logical facts and rules used by the expert system.
-
-├── interface/
-│   └── interface.py
-│       Python interface that communicates with the Prolog engine using the pyswip library.
-│       Handles user interaction and executes queries against the knowledge base.
-
-├── docs/
-│   └── knowledge_engineering_report.md
-│       Documentation describing the knowledge acquisition process and sources used
-│       to construct the expert system rules.
-
-├── README.md
-│       Project overview, group members, setup instructions, and system description.
-
-└── requirements.txt
-        Python dependencies required to run the interface (e.g., pyswip).
+├── wifi_expert/
+│   ├── wifi_expert.pl
+│   │       Entry point. Loads all modules and exposes start/0 and run_tests/0.
+│   │
+│   ├── knowledge_base.pl
+│   │       Static knowledge: diagnostic questions, confidence scores,
+│   │       explanations, and step-by-step advice for each diagnosis.
+│   │
+│   ├── rules.pl
+│   │       Six IF-THEN diagnosis rules evaluated by the inference engine
+│   │       using Prolog's backward chaining mechanism.
+│   │
+│   ├── engine.pl
+│   │       Inference engine: finds the first matching diagnosis, handles
+│   │       the Q&A loop with answer caching, and prints the diagnosis report.
+│   │
+│   └── tests.pl
+│           Automated test suite with 7 pre-loaded test cases covering
+│           all six diagnoses, including both patterns of router/ISP failure.
+│
+└── README.md
+        Project overview, group members, setup instructions, and system description.
 ```
-# How to Run the System
 
-1. Install **SWI-Prolog**
-2. Clone this repository
-3. Open the Prolog file
+---
 
+## How to Run the System
+
+### Requirements
+- [SWI-Prolog](https://www.swi-prolog.org/download/stable) installed and available on your PATH
+
+### Steps
+
+**1. Open a terminal and navigate into the project folder:**
+```bash
+cd path/to/DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/wifi_expert
+```
+
+**2. Launch SWI-Prolog with the entry point file:**
+```bash
+swipl wifi_expert.pl
+```
+
+**3. Inside SWI-Prolog, start the interactive diagnosis:**
 ```prolog
-?- [wifi_expert].
+?- start.
+```
 
-Run the expert system
+**4. Answer each question with `yes.` or `no.` (the dot is required), then press Enter.**
 
-?- go.
+The system will output:
+- The diagnosed issue and confidence score
+- An explanation of why that diagnosis was reached
+- Step-by-step recommended actions
+- A summary of all facts collected during the session
 
-Answer the diagnostic questions with:
+---
 
-yes.
-or
-no.
+### Run the Automated Test Suite
+
+To validate all 7 test cases without user input:
+```prolog
+?- run_tests.
+```
+
+Expected output:
+```
+[PASS] tc1  =>  airplane_mode_enabled
+[PASS] tc2  =>  wifi_disabled
+[PASS] tc3  =>  adapter_or_driver_issue
+[PASS] tc4  =>  password_or_profile_issue
+[PASS] tc5  =>  dns_or_ip_stack_issue
+[PASS] tc6  =>  router_or_isp_problem
+[PASS] tc7  =>  router_or_isp_problem
+```
