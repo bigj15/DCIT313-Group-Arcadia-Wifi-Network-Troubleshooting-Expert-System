@@ -83,18 +83,7 @@ This project applies expert system techniques to automate structured troubleshoo
 ---
 
 # Technologies Used
-
-- **SWI-Prolog** – for implementing the expert system
+- **Logic Engine:** SWI-Prolog  
+- **User Interface:** Python with the `pyswip` library  
 - **Rule-Based Knowledge Representation**
 - **Backward Chaining Inference**
-
----
-
-# How to Run the System
-
-1. Install **SWI-Prolog**
-2. Clone this repository
-3. Open the Prolog file
-
-```prolog
-?- [wifi_expert].
