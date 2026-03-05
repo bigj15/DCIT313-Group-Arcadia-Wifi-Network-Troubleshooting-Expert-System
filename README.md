@@ -120,52 +120,21 @@ DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/
 
 ---
 
-## How to Run the System
+# How to Run the System
 
-### Requirements
-- [SWI-Prolog](https://www.swi-prolog.org/download/stable) installed and available on your PATH
+1. Install **SWI-Prolog**
+2. Clone this repository
+3. Open the Prolog file
 
-### Steps
-
-**1. Open a terminal and navigate into the project folder:**
-```bash
-cd path/to/DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/wifi_expert
-```
-
-**2. Launch SWI-Prolog with the entry point file:**
-```bash
-swipl wifi_expert.pl
-```
-
-**3. Inside SWI-Prolog, start the interactive diagnosis:**
 ```prolog
-?- start.
-```
+?- [wifi_expert].
 
-**4. Answer each question with `yes.` or `no.` (the dot is required), then press Enter.**
+Run the expert system
 
-The system will output:
-- The diagnosed issue and confidence score
-- An explanation of why that diagnosis was reached
-- Step-by-step recommended actions
-- A summary of all facts collected during the session
+?- go.
 
----
+Answer the diagnostic questions with:
 
-### Run the Automated Test Suite
-
-To validate all 7 test cases without user input:
-```prolog
-?- run_tests.
-```
-
-Expected output:
-```
-[PASS] tc1  =>  airplane_mode_enabled
-[PASS] tc2  =>  wifi_disabled
-[PASS] tc3  =>  adapter_or_driver_issue
-[PASS] tc4  =>  password_or_profile_issue
-[PASS] tc5  =>  dns_or_ip_stack_issue
-[PASS] tc6  =>  router_or_isp_problem
-[PASS] tc7  =>  router_or_isp_problem
-```
+yes.
+or
+no.
