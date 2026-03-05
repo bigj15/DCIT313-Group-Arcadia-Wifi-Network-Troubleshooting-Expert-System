@@ -90,22 +90,27 @@ This project applies expert system techniques to automate structured troubleshoo
 
 ---
 
-#Projet Structure
-wifi-troubleshooting-expert-system/
+## Project Structure
+
+
+wifi-network-troubleshooting-expert-system
 │
-├── knowledge_base/
+├── knowledge_base
 │ └── wifi_expert.pl
-│ # Prolog knowledge base containing facts, rules, and inference logic
+│ Prolog knowledge base containing logical facts and rules used by the expert system.
 │
-├── interface/
+├── interface
 │ └── interface.py
-│ # Python script using pyswip to interact with the Prolog engine
-│ # Handles user input and sends queries to the knowledge base
+│ Python interface that communicates with the Prolog engine using the pyswip library.
+│ Handles user interaction and executes queries against the knowledge base.
 │
-├── docs/
+├── docs
 │ └── knowledge_engineering_report.md
-│ # Documentation describing the knowledge acquisition process
-│ # Includes sources used to design the rules and system logic
+│ Documentation describing the knowledge acquisition process and sources used to
+│ construct the expert system rules.
 │
 ├── README.md
-│ # Project description, team members, setup instructions
+│ Project overview, group members, setup instructions, and system description.
+│
+└── requirements.txt
+Python dependencies required to run the interface (e.g., pyswip).
