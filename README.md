@@ -87,3 +87,25 @@ This project applies expert system techniques to automate structured troubleshoo
 - **User Interface:** Python with the `pyswip` library  
 - **Rule-Based Knowledge Representation**
 - **Backward Chaining Inference**
+
+---
+
+#Projet Structure
+wifi-troubleshooting-expert-system/
+│
+├── knowledge_base/
+│ └── wifi_expert.pl
+│ # Prolog knowledge base containing facts, rules, and inference logic
+│
+├── interface/
+│ └── interface.py
+│ # Python script using pyswip to interact with the Prolog engine
+│ # Handles user input and sends queries to the knowledge base
+│
+├── docs/
+│ └── knowledge_engineering_report.md
+│ # Documentation describing the knowledge acquisition process
+│ # Includes sources used to design the rules and system logic
+│
+├── README.md
+│ # Project description, team members, setup instructions
