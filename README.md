@@ -109,11 +109,9 @@ DCIT313-Group-Arcadia-Wifi-Network-Troubleshooting-Expert-System/
 │       Documentation describing the knowledge acquisition process and sources used
 │       to construct the expert system rules.
 
-├── README.md
-│       Project overview, group members, setup instructions, and system description.
+└── README.md
+        Project overview, group members, setup instructions, and system description.
 
-└── requirements.txt
-        Python dependencies required to run the interface (e.g., pyswip).
 ```
 
 ---
