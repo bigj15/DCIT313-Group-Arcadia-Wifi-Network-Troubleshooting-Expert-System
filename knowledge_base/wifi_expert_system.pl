@@ -17,3 +17,7 @@ question(other_devices_internet, 'Do other devices have internet on that Wi-Fi?'
 % ask/2 predicate
 ask(Fact, Answer) :-
     known(Fact, Answer), !.
+ask(Fact, Answer) :-
+    question(Fact, Question),
+    py_ask(Question, Answer),
+    assert(known(Fact, Answer)).    
