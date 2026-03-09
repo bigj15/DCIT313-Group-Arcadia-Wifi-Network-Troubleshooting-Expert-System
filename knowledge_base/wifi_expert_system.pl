@@ -32,4 +32,8 @@ reset :-
 
 % Diagnosis rules
 diagnosis(airplane_mode_enabled, 95) :-
-    fact(airplane_mode).            
+    fact(airplane_mode).  
+
+% Diagnosis rules
+diagnosis(airplane_mode_enabled, 95) :-
+    fact(airplane_mode).              
