@@ -64,6 +64,8 @@ diagnosis(router_or_isp_problem, 75) :-
 % best_diagnosis/2 predicate
 best_diagnosis(Diagnosis, Score) :-
     findall(Score-Diagnosis, diagnosis(Diagnosis, Score), List),
-    sort(List, Sorted),       
+    sort(List, Sorted), 
+    reverse(Sorted, [Score-Diagnosis|_]), !.
+best_diagnosis(no_clear_diagnosis, 0).      
     
    
