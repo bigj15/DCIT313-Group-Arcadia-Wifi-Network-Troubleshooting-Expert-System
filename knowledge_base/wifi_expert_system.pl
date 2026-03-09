@@ -110,3 +110,11 @@ advice(router_or_isp_problem, [
     'Try another network such as a mobile hotspot to confirm the laptop is not the issue.',
     'Contact the ISP if the internet remains down for all devices.'
 ]).
+
+advice(no_clear_diagnosis, [
+    'Collect more details about the connection problem.',
+    'Restart both the laptop and router.',
+    'Test with another Wi-Fi network or hotspot.',
+    'Escalate to technical support if the issue continues.'
+]).
+
