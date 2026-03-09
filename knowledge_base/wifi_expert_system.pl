@@ -89,3 +89,10 @@ advice(adapter_or_driver_issue, [
     'Update or reinstall the Wi-Fi driver.',
     'Test with a mobile hotspot or USB Wi-Fi adapter to isolate hardware issues.'
 ]).
+
+advice(password_or_profile_issue, [
+    'Forget the Wi-Fi network and reconnect.',
+    'Re-enter the password carefully and confirm it is the latest one.',
+    'Restart the router and try again.',
+    'Try connecting to a mobile hotspot to confirm the laptop can connect elsewhere.'
+]).
