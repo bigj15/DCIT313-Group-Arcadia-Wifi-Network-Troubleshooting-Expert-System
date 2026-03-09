@@ -59,6 +59,9 @@ diagnosis(router_or_isp_problem, 75) :-
     known(other_devices_connect, no).
 
 diagnosis(router_or_isp_problem, 75) :-
-    known(other_devices_internet, no).        
+    known(other_devices_internet, no). 
+
+% best_diagnosis/2 predicate
+best_diagnosis(Diagnosis, Score) :-           
     
    
