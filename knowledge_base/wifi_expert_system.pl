@@ -82,3 +82,10 @@ advice(wifi_disabled, [
     'Reconnect to the correct network.',
     'Restart the laptop if Wi-Fi will not enable.'
 ]).
+
+advice(adapter_or_driver_issue, [
+    'Restart the laptop.',
+    'Check the Wi-Fi adapter is enabled in Device Manager or Network settings.',
+    'Update or reinstall the Wi-Fi driver.',
+    'Test with a mobile hotspot or USB Wi-Fi adapter to isolate hardware issues.'
+]).
