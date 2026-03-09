@@ -67,5 +67,11 @@ best_diagnosis(Diagnosis, Score) :-
     sort(List, Sorted), 
     reverse(Sorted, [Score-Diagnosis|_]), !.
 best_diagnosis(no_clear_diagnosis, 0).      
-    
-   
+
+% Advice rules
+advice(airplane_mode_enabled, [
+    'Turn off Airplane Mode.',
+    'Enable Wi-Fi afterwards if it remains off.',
+    'Reconnect to the Wi-Fi network.',
+    'Restart the laptop if Wi-Fi still does not appear.'
+]). 
