@@ -36,4 +36,9 @@ diagnosis(airplane_mode_enabled, 95) :-
 
 % Diagnosis rules
 diagnosis(airplane_mode_enabled, 95) :-
-    fact(airplane_mode).              
+    fact(airplane_mode). 
+
+diagnosis(adapter_or_driver_issue, 80) :-
+    known(airplane_mode, no),
+    known(wifi_enabled, yes),
+    known(sees_networks, no).
