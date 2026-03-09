@@ -51,5 +51,8 @@ diagnosis(password_or_profile_issue, 85) :-
     known(other_devices_connect, yes).
 
 diagnosis(dns_or_ip_stack_issue, 80) :-
-    known(connected_to_wifi, yes),    
+    known(connected_to_wifi, yes),
+    known(internet_access, no),
+    known(other_devices_internet, yes).
+    
    
