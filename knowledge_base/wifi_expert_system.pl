@@ -20,4 +20,8 @@ ask(Fact, Answer) :-
 ask(Fact, Answer) :-
     question(Fact, Question),
     py_ask(Question, Answer),
-    assert(known(Fact, Answer)).    
+    assert(known(Fact, Answer)).  
+
+% fact/1 predicate
+fact(Fact) :-
+    known(Fact, yes).      
