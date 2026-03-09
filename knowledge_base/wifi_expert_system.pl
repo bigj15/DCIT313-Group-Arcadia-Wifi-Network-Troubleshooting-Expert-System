@@ -62,6 +62,8 @@ diagnosis(router_or_isp_problem, 75) :-
     known(other_devices_internet, no). 
 
 % best_diagnosis/2 predicate
-best_diagnosis(Diagnosis, Score) :-           
+best_diagnosis(Diagnosis, Score) :-
+    findall(Score-Diagnosis, diagnosis(Diagnosis, Score), List),
+    sort(List, Sorted),       
     
    
