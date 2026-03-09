@@ -45,4 +45,8 @@ diagnosis(adapter_or_driver_issue, 80) :-
 
 diagnosis(password_or_profile_issue, 85) :-
     known(airplane_mode, no),
-    known(wifi_enabled, yes),    
+    known(wifi_enabled, yes), 
+    known(sees_networks, yes),
+    known(can_connect, no),
+    known(other_devices_connect, yes).
+   
