@@ -75,3 +75,10 @@ advice(airplane_mode_enabled, [
     'Reconnect to the Wi-Fi network.',
     'Restart the laptop if Wi-Fi still does not appear.'
 ]). 
+
+advice(wifi_disabled, [
+    'Turn on Wi-Fi from settings or the Wi-Fi key or switch.',
+    'Confirm the Wi-Fi adapter is enabled in network settings.',
+    'Reconnect to the correct network.',
+    'Restart the laptop if Wi-Fi will not enable.'
+]).
