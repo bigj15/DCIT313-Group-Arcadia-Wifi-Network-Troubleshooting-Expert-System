@@ -104,3 +104,9 @@ advice(dns_or_ip_stack_issue, [
     'Temporarily change DNS to a public DNS such as 8.8.8.8 or 1.1.1.1 to test.'
 ]).
 
+advice(router_or_isp_problem, [
+    'Restart the router by powering it off for about 10 seconds and then on again.',
+    'Check the router Internet or WAN indicator lights.',
+    'Try another network such as a mobile hotspot to confirm the laptop is not the issue.',
+    'Contact the ISP if the internet remains down for all devices.'
+]).
