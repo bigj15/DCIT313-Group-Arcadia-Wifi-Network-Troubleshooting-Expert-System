@@ -49,4 +49,7 @@ diagnosis(password_or_profile_issue, 85) :-
     known(sees_networks, yes),
     known(can_connect, no),
     known(other_devices_connect, yes).
+
+diagnosis(dns_or_ip_stack_issue, 80) :-
+    known(connected_to_wifi, yes),    
    
