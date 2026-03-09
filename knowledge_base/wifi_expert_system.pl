@@ -56,6 +56,9 @@ diagnosis(dns_or_ip_stack_issue, 80) :-
     known(other_devices_internet, yes).
 
 diagnosis(router_or_isp_problem, 75) :-
-    known(other_devices_connect, no).    
+    known(other_devices_connect, no).
+
+diagnosis(router_or_isp_problem, 75) :-
+    known(other_devices_internet, no).        
     
    
