@@ -54,5 +54,8 @@ diagnosis(dns_or_ip_stack_issue, 80) :-
     known(connected_to_wifi, yes),
     known(internet_access, no),
     known(other_devices_internet, yes).
+
+diagnosis(router_or_isp_problem, 75) :-
+    known(other_devices_connect, no).    
     
    
