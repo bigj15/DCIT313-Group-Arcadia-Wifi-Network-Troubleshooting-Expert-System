@@ -24,4 +24,8 @@ ask(Fact, Answer) :-
 
 % fact/1 predicate
 fact(Fact) :-
-    known(Fact, yes).      
+    known(Fact, yes).  
+
+% reset/0 predicate
+reset :-
+    retractall(known(_, _)).        
