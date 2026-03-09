@@ -118,3 +118,31 @@ advice(no_clear_diagnosis, [
     'Escalate to technical support if the issue continues.'
 ]).
 
+% Explanation rules
+explain(airplane_mode_enabled, [
+    'Airplane Mode disables wireless radios, including Wi-Fi, so the laptop cannot connect until it is turned off.'
+]).
+
+explain(wifi_disabled, [
+    'Wi-Fi is turned off on the laptop, preventing it from scanning and connecting to networks.'
+]).
+
+explain(adapter_or_driver_issue, [
+    'Wi-Fi is enabled and Airplane Mode is off, but no networks are visible, indicating the adapter may be disabled, malfunctioning, or the driver is faulty.'
+]).
+
+explain(password_or_profile_issue, [
+    'The laptop sees networks but cannot connect while other devices can, suggesting incorrect credentials or a corrupted saved Wi-Fi profile.'
+]).
+
+explain(dns_or_ip_stack_issue, [
+    'The laptop is connected to Wi-Fi but has no internet while other devices do, indicating a DNS or IP configuration problem on the laptop.'
+]).
+
+explain(router_or_isp_problem, [
+    'If multiple devices cannot connect or cannot access the internet, the issue is likely with the router or the ISP rather than the laptop.'
+]).
+
+explain(no_clear_diagnosis, [
+    'The available answers do not match any rule strongly enough to produce a confident diagnosis.'
+]).
