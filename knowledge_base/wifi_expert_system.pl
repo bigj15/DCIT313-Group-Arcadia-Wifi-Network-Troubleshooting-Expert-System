@@ -96,3 +96,11 @@ advice(password_or_profile_issue, [
     'Restart the router and try again.',
     'Try connecting to a mobile hotspot to confirm the laptop can connect elsewhere.'
 ]).
+
+advice(dns_or_ip_stack_issue, [
+    'Disconnect and reconnect to Wi-Fi.',
+    'Renew IP or DHCP or run the network troubleshooter.',
+    'Flush DNS and retry.',
+    'Temporarily change DNS to a public DNS such as 8.8.8.8 or 1.1.1.1 to test.'
+]).
+
