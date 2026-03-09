@@ -28,4 +28,8 @@ fact(Fact) :-
 
 % reset/0 predicate
 reset :-
-    retractall(known(_, _)).        
+    retractall(known(_, _)).
+
+% Diagnosis rules
+diagnosis(airplane_mode_enabled, 95) :-
+    fact(airplane_mode).            
