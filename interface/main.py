@@ -107,5 +107,13 @@ def run_consultation():
             else:
                 # Diagnosis: Router or ISP problem
                 return get_diagnosis_and_display(prolog, 'router_or_isp_problem')
+    
+    # If we reach here, use best_diagnosis to find the match
+    result = list(prolog.query("best_diagnosis(Diagnosis, Score)"))
+    if result:
+        diagnosis = result[0]['Diagnosis']
+        return get_diagnosis_and_display(prolog, diagnosis)
+    else:
+        return get_diagnosis_and_display(prolog, 'no_clear_diagnosis')
             
             
