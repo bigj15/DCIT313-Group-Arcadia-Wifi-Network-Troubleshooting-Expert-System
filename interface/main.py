@@ -115,5 +115,6 @@ def run_consultation():
         return get_diagnosis_and_display(prolog, diagnosis)
     else:
         return get_diagnosis_and_display(prolog, 'no_clear_diagnosis')
-            
-            
+
+def get_diagnosis_and_display(prolog, diagnosis):    
+    
