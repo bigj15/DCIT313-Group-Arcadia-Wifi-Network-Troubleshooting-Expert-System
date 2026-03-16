@@ -138,3 +138,37 @@ def get_diagnosis_and_display(prolog, diagnosis):
         explain_list = explain_result[0]['Explanation']
     else:
         explain_list = []
+
+    # Format and print results
+    print("\n" + "="*50)
+    print(f"Most Likely Issue: {diagnosis.replace('_', ' ').title()}")
+    print(f"Confidence: {score}%")
+    print("="*50)
+    
+    if advice_list:
+        print("\nRecommended Actions:")
+        for action in advice_list:
+            print(f"* {action}")
+
+    if explain_list:
+        print("\nExplanation:")
+        for explanation in explain_list:
+            print(f"* {explanation}")
+    
+    print("\n" + "="*50)
+
+def main():
+    print("Wi-Fi Expert System - Diagnostic Tool")
+    print("="*50)
+    print("Answer the following questions to diagnose your Wi-Fi problem.\n")
+    
+    try:
+        run_consultation()
+    except FileNotFoundError:
+        print("Error: Could not find 'knowledge_base/wifi_expert_system.pl'")
+        print("Make sure you are running this from the project root directory.")
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    main()
