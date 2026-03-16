@@ -116,5 +116,25 @@ def run_consultation():
     else:
         return get_diagnosis_and_display(prolog, 'no_clear_diagnosis')
 
-def get_diagnosis_and_display(prolog, diagnosis):    
+def get_diagnosis_and_display(prolog, diagnosis):
+    """Retrieve and display diagnosis, advice, and explanation."""
+    # Get confidence score
+    result = list(prolog.query(f"diagnosis({diagnosis}, Score)"))
+    if result:
+        score = result[0]['Score']
+    else:
+        score = 0
     
+    # Get advice
+    advice_result = list(prolog.query(f"advice({diagnosis}, Advice)"))
+    if advice_result:
+        advice_list = advice_result[0]['Advice']
+    else:
+        advice_list = []
+    
+    # Get explanation
+    explain_result = list(prolog.query(f"explain({diagnosis}, Explanation)"))
+    if explain_result:
+        explain_list = explain_result[0]['Explanation']
+    else:
+        explain_list = []
