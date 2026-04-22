@@ -144,9 +144,10 @@ def get_diagnosis_and_display(prolog, diagnosis):
     print(f"Most Likely Issue: {diagnosis.replace('_', ' ').title()}")
     print(f"Confidence: {score}%")
     print("="*50)
+    print()  # Add blank line for better spacing
     
     if advice_list:
-        print("\nRecommended Actions:")
+        print("Recommended Actions:")
         for action in advice_list:
             print(f"* {action}")
 
