@@ -126,9 +126,9 @@ def get_diagnosis_and_display(prolog, diagnosis):
         score = 0
     
     # Get advice
-    advice_result = list(prolog.query(f"advice({diagnosis}, Advice)"))
-    if advice_result:
-        advice_list = advice_result[0]['Advice']
+    advice_query_result = list(prolog.query(f"advice({diagnosis}, Advice)"))
+    if advice_query_result:
+        advice_list = advice_query_result[0]['Advice']
     else:
         advice_list = []
     
