@@ -31,16 +31,15 @@ This project applies expert system techniques to automate structured troubleshoo
 
 # Group Members
 
-| Name | Student ID | Role |
-|-----|-----|-----|
-| **Jedidiah Nii Saban Delali Annan** | 22037871 | Project Manager |
-| **Isaac Morrison Nii Lartey Quaye** | 22079872 | Knowledge Engineer |
-| **Eyram Mami Araba Kumah** | 22047897 | Knowledge Engineer |
-| **Emmanuel Eyram Korku Agbetor** | 22206812 | Programmer |
-| **Jephthah Peprah** | 22036173 | Programmer |
-| **Selorm Sem** | 22243032 | Programmer |
-| **Musharafa Moro** | 22059797 | Programmer |
-
+| Name | Student ID | Role | GitHub Username |
+|---|---|---|---|
+| Jedidiah Nii Saban Delali Annan | 22037871 | Project Manager | bigj15 |
+| Isaac Morrison Nii Lartey Quaye | 22079872 | Knowledge Engineer | imquaye |
+| Eyram Mami Araba Kumah | 22047897 | Knowledge Engineer | maaraba-06 |
+| Emmanuel Eyram Korku Agbetor | 22206812 | Programmer | aee4 |
+| Jephthah Peprah | 22036173 | Programmer | Jeffwhite099 |
+| Selorm Sem | 22243032 | Programmer | miss-sem |
+| Musharafa Moro | 22059797 | Programmer | Musharafa19 |
 ---
 
 # Roles and Responsibilities
