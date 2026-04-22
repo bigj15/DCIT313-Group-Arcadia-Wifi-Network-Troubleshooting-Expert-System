@@ -19,9 +19,9 @@ def ask_user(question):
 
 def get_question(prolog, fact):
     """Retrieve the question text for a given fact."""
-    result = list(prolog.query(f"question({fact}, Q)"))
-    if result:
-        return result[0]['Q']
+    query_result = list(prolog.query(f"question({fact}, Q)"))
+    if query_result:
+        return query_result[0]['Q']
     return None
 
 def assert_answer(prolog, fact, answer):
