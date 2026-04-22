@@ -25,7 +25,7 @@ def get_question(prolog, fact):
     return None
 
 def assert_answer(prolog, fact, answer):
-    """Assert the user's answer into Prolog's knowledge base."""
+    """Add the user's answer as a known fact in the Prolog knowledge base."""
     prolog.assertz(f"known({fact}, {answer})")
 
 def run_consultation():
