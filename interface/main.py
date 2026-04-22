@@ -30,7 +30,7 @@ def assert_answer(prolog, fact, answer):
 
 def run_consultation():
     """Run the adaptive consultation flow."""
-    # Initialize Prolog
+    # Initialize Prolog engine and load knowledge base
     prolog = Prolog()
     prolog.consult('knowledge_base/wifi_expert_system.pl')
     
