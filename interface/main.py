@@ -9,10 +9,10 @@ from pyswip import Prolog
 def ask_user(question):
     """Ask user a yes/no question and return normalized answer."""
     while True:
-        answer = input(f"{question} (yes/no): ").strip().lower()
-        if answer in ['yes', 'y']:
+        user_input = input(f"{question} (yes/no): ").strip().lower()
+        if user_input in ['yes', 'y']:
             return 'yes'
-        elif answer in ['no', 'n']:
+        elif user_input in ['no', 'n']:
             return 'no'
         else:
             print("Please answer yes or no.")
