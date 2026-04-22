@@ -161,6 +161,7 @@ def get_diagnosis_and_display(prolog, diagnosis):
 def main():
     print("Wi-Fi Expert System - Diagnostic Tool")
     print("="*50)
+    print()  # Add blank line for spacing
     print("Answer the following questions to diagnose your Wi-Fi problem.\n")
     
     try:
