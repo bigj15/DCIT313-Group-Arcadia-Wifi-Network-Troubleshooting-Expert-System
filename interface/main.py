@@ -109,9 +109,9 @@ def run_consultation():
                 return get_diagnosis_and_display(prolog, 'router_or_isp_problem')
     
     # If we reach here, use best_diagnosis to find the match
-    result = list(prolog.query("best_diagnosis(Diagnosis, Score)"))
-    if result:
-        diagnosis = result[0]['Diagnosis']
+    best_diagnosis_result = list(prolog.query("best_diagnosis(Diagnosis, Score)"))
+    if best_diagnosis_result:
+        diagnosis = best_diagnosis_result[0]['Diagnosis']
         return get_diagnosis_and_display(prolog, diagnosis)
     else:
         return get_diagnosis_and_display(prolog, 'no_clear_diagnosis')
