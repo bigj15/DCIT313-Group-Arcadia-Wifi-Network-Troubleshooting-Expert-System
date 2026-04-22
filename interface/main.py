@@ -133,9 +133,9 @@ def get_diagnosis_and_display(prolog, diagnosis):
         advice_list = []
     
     # Get explanation
-    explain_result = list(prolog.query(f"explain({diagnosis}, Explanation)"))
-    if explain_result:
-        explain_list = explain_result[0]['Explanation']
+    explain_query_result = list(prolog.query(f"explain({diagnosis}, Explanation)"))
+    if explain_query_result:
+        explain_list = explain_query_result[0]['Explanation']
     else:
         explain_list = []
 
