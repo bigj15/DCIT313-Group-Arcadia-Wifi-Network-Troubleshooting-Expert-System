@@ -119,9 +119,9 @@ def run_consultation():
 def get_diagnosis_and_display(prolog, diagnosis):
     """Retrieve and display diagnosis, advice, and explanation."""
     # Get confidence score
-    result = list(prolog.query(f"diagnosis({diagnosis}, Score)"))
-    if result:
-        score = result[0]['Score']
+    diagnosis_result = list(prolog.query(f"diagnosis({diagnosis}, Score)"))
+    if diagnosis_result:
+        score = diagnosis_result[0]['Score']
     else:
         score = 0
     
